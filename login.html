@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styleslo.css">
+    
+</head>
+<body>
+    <div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+           	<h1>Crea tu Cuenta</h1>
+			<span>o usa tu email para registrarte</span>
+			<input type="text" placeholder="name" />
+			<input type="email" placeholder="email" />
+			<input type="password" placeholder="password" />
+			<button type="submit">Resgistrarse</button>
+		</form>
+		<script>
+			<form method="POST" action="index.html"></form>
+			function auth(){
+				var email=document.getElementById('email').value;
+				var password=document.getElementById('password').value;
+				if(email=='admin@gmail.com' && password ==12345678){
+					window.location.assign('index.html');
+					alert("login succesfully");
+				}
+				else{
+					alert("invalid information");
+					return;
+				}
+			}
+		</script>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Iniciar Sesion</h1>
+			<span>o usa tu cuenta</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Olvidaste tu contrseña?</a>
+			<button type="submit" onclick="auth()">Iniciar Sesion</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bienvenido de nuevo!</h1>
+				<p class="text-emerald-900" >Para mantenerse conectado con nosotros, inicie sesión con su información personal.</p>
+				<button class="ghost" id="signIn">Iniciar Sesion</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hola!!!!</h1>
+				<p class="text-emerald-900">Introduce tus datos personales y comienza tu aventura con nosotros.</p>
+				<button class="ghost" id="signUp">Resgistrarse</button>
+			</div>
+		</div>
+	</div>
+    </div>
+   
+	<script src="api.js"></script>
+   <a href="index.html">Inicio</a>
+</body>
+<html>
