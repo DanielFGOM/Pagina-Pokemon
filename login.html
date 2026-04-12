@@ -9,39 +9,37 @@
 </head>
 <body>
     <div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
+	<div class="form-container sign-up-container">		
+            <form action="#">
            	<h1>Crea tu Cuenta</h1>
 			<span>o usa tu email para registrarte</span>
-			<input type="text" placeholder="name" />
-			<input type="email" placeholder="email" />
-			<input type="password" placeholder="password" />
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
 			<button type="submit">Resgistrarse</button>
-		</form>
-		<script>
-			<form method="POST" action="index.html"></form>
-			function auth(){
-				var email=document.getElementById('email').value;
-				var password=document.getElementById('password').value;
-				if(email=='admin@gmail.com' && password ==12345678){
-					window.location.assign('index.html');
-					alert("login succesfully");
-				}
-				else{
-					alert("invalid information");
-					return;
-				}
-			}
-		</script>
+		    </form>
+	
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="#">
+			
 			<h1>Iniciar Sesion</h1>
 			<span>o usa tu cuenta</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input id="email" type="email" placeholder="Email" />
+			<input id="password" type="password" placeholder="Password" />
 			<a href="#">Olvidaste tu contrseña?</a>
-			<button type="submit" onclick="auth()">Iniciar Sesion</button>
+			<button type="button" onclick="auth()">Iniciar Sesion</button>
+			<script>
+			function auth(){
+				var email=document.getElementById('email').value;
+				var password=document.getElementById('password').value;
+				if(email=='admin@gmail.com' && password == "12345678"){
+					window.location.assign('index.html');
+					return;
+				
+				}
+			}
+		</script>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -60,7 +58,6 @@
 	</div>
     </div>
    
-	<script src="api.js"></script>
-   <a href="index.html">Inicio</a>
+	<script src="login.js"></script>
 </body>
 <html>
